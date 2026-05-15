@@ -184,7 +184,6 @@ body::before {
   transition: box-shadow 0.3s, border-color 0.3s;
 }
 
-
 .search-bar:focus-within {
   border-color: rgba(255,190,60,0.5);
   box-shadow: 0 0 0 3px rgba(255,190,60,0.1), var(--shadow-card);
@@ -209,17 +208,8 @@ body::before {
   font-weight: 300;
 }
 
-.search-bar {
-  display: flex;
-  align-items: stretch;
-  width: 100%;
-  max-width: 580px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  box-shadow: 0 0 0 0 rgba(255,190,60,0), var(--shadow-card);
-  transition: box-shadow 0.3s, border-color 0.3s;
+.search-box button{
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
 }
 
 .search-btn {
