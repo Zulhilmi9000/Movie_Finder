@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieFinder – Sistem Carian Filem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- LOGO -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon" aria-hidden="true">🎬</span>
+        <span class="logo-text">Movie<span class="logo-accent">Finder</span></span>
+      </div>
+    </header>
+
+    <!-- SEARCH SECTION -->
+    <section class="search-section">
+      <div class="search-bar">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Cari siri TV atau filem..."
+          autocomplete="off"
+          aria-label="Cari siri TV atau filem"
+        />
+        <button id="searchBtn" class="search-btn">CARI</button>
+      </div>
+
+      <div class="suggestions">
+        <span class="suggestions-label">Cadangan:</span>
+        <button class="chip" data-query="Batman">Batman</button>
+        <button class="chip" data-query="Spider-man">Spider-man</button>
+        <button class="chip" data-query="Avengers">Avengers</button>
+        <button class="chip" data-query="Stranger Things">Stranger Things</button>
+      </div>
+    </section>
+
+    <!-- RESULTS AREA -->
+    <section class="results-section">
+      <p class="results-count hidden" id="resultsCount"></p>
+
+      <!-- Loading -->
+      <div class="loading hidden" id="loading">
+        <div class="spinner"></div>
+        <p>Sedang mencari...</p>
+      </div>
+
+      <!-- Status / Empty -->
+      <div class="status-box" id="statusBox">
+        <p class="status-text">Sila masukkan tajuk filem untuk memulakan carian.</p>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="cards-grid" id="cardsGrid"></div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
