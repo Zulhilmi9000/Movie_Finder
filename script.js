@@ -45,6 +45,13 @@ function getGenre(genres) {
   return genres[0];
 }
 
+function showLoading() {
+  loading.classList.remove('hidden');
+  cardsGrid.innerHTML = '';
+  resultsCount.classList.add('hidden');
+  hideStatus();
+}
+
 /* ── BUILD SINGLE CARD ─────────────────────────────────── */
 function buildCard(show, index) {
   const card  = document.createElement('article');
